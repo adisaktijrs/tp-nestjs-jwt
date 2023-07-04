@@ -63,7 +63,7 @@ export class AuthService {
       throw new ForbiddenException();
     }
 
-    res.cookie('token', token, { httpOnly: true, maxAge: 10000 });
+    res.cookie('token', token, { httpOnly: true, maxAge: 60000 });
 
     return res.send({ message: 'Logged in successfully' });
   }
